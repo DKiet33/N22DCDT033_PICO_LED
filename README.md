@@ -62,6 +62,38 @@ This system runs **fully offline** on the microcontroller—no Wi-Fi, no cloud p
 | **Python 3** | 3.8+ | WAV conversion scripts (`scipy`, `numpy`, `pydub`) |
 | **Edge Impulse Studio** | Free account | Model training and C++ export |
 
+### Installation Tutorial (Windows)
+
+1. **Install CMake & Build Tools**
+   - Download and install [CMake](https://cmake.org/download/). Make sure to select **"Add CMake to the system PATH"** during installation.
+   - Install **Visual Studio Build Tools** (or full Visual Studio) and ensure the "Desktop development with C++" workload is selected. This provides `nmake`.
+
+2. **Install GNU ARM Embedded Toolchain**
+   - Download the [Arm GNU Toolchain](https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads) for Windows.
+   - Run the installer. On the final screen, **check the box** that says **"Add path to environment variable"**.
+
+3. **Install Python 3**
+   - Download from [python.org](https://www.python.org/downloads/).
+   - **Check "Add Python to PATH"** at the very bottom of the installer before clicking Install.
+   - Open a terminal and install the required packages:
+     ```powershell
+     pip install scipy numpy pydub
+     ```
+
+4. **Set Up the Raspberry Pi Pico SDK**
+   - Open a terminal (like Git Bash or PowerShell).
+   - Clone the SDK repository:
+     ```powershell
+     git clone -b master https://github.com/raspberrypi/pico-sdk.git
+     cd pico-sdk
+     git submodule update --init
+     ```
+   - Set the environment variable so CMake can find the SDK. Open PowerShell and run:
+     ```powershell
+     [Environment]::SetEnvironmentVariable("PICO_SDK_PATH", "C:\your\actual\path\to\pico-sdk", "User")
+     ```
+   - *(Be sure to replace the path above with exactly where you cloned the repo).* Restart your terminal afterward to ensure the new variable is loaded.
+
 ---
 
 ## 🔄 Project Architecture & Flow
