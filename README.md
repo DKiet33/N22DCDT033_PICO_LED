@@ -181,7 +181,7 @@ In `lights.cpp`:
 * Set `PIN` (7) and `NUM_LIGHTS` to match your actual LED count.
 
 ### Phase 5 — Build & Flash
-1. Open **Developer PowerShell for VS**.
+1. Open a terminal (like **Developer PowerShell for VS**).
 2. Navigate to the `pico-light-voice` build directory.
 3. Run `cmake .. -G "NMake Makefiles"` (or Ninja).
 4. Run `nmake` (or `ninja`).
