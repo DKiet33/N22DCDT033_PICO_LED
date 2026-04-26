@@ -6,7 +6,7 @@ This system runs **fully offline** on the microcontroller—no Wi-Fi, no cloud p
 
 ---
 
-## 🌟 Features
+## Features
 
 * **100% Offline Keyword Spotting**: Local, continuous audio inference running on the RP2350.
 * **Dual-Core Architecture**:
@@ -17,7 +17,7 @@ This system runs **fully offline** on the microcontroller—no Wi-Fi, no cloud p
 
 ---
 
-## 🏗️ Hardware Requirements & Wiring
+## Hardware Requirements & Wiring
 
 | Component | Specification | Purpose |
 |-----------|--------------|---------|
@@ -51,7 +51,7 @@ This system runs **fully offline** on the microcontroller—no Wi-Fi, no cloud p
 
 ---
 
-## 💻 Software & Environment Requirements
+## Software & Environment Requirements
 
 | Tool | Min Version | Purpose |
 |------|------------|---------|
@@ -96,7 +96,7 @@ This system runs **fully offline** on the microcontroller—no Wi-Fi, no cloud p
 
 ---
 
-## 🔄 Project Architecture & Flow
+## Project Architecture & Flow
 
 ```text
 [Your Voice]
@@ -148,7 +148,7 @@ This system runs **fully offline** on the microcontroller—no Wi-Fi, no cloud p
 
 ---
 
-## 🚀 Step-by-Step Project Plan
+## Step-by-Step Project Plan
 
 ### Phase 1 — Hardware Assembly
 1. Wire the Pico 2, MAX9814, and WS2812 strip according to the diagram above.
@@ -181,15 +181,16 @@ In `lights.cpp`:
 * Set `PIN` (7) and `NUM_LIGHTS` to match your actual LED count.
 
 ### Phase 5 — Build & Flash
-1. Navigate to the `pico-light-voice` build directory.
-2. Run `cmake .. -G "NMake Makefiles"` (or Ninja).
-3. Run `nmake` (or `ninja`).
-4. Hold **BOOTSEL** on the Pico 2, connect USB, and drag `build/pico-voice.uf2` onto the `RPI-RP2` drive.
-5. Monitor serial output (115200 baud) for classification probabilities.
+1. Open **Developer PowerShell for VS**.
+2. Navigate to the `pico-light-voice` build directory.
+3. Run `cmake .. -G "NMake Makefiles"` (or Ninja).
+4. Run `nmake` (or `ninja`).
+5. Hold **BOOTSEL** on the Pico 2, connect USB, and drag `build/pico-voice.uf2` onto the `RPI-RP2` drive.
+6. Monitor serial output (115200 baud) for classification probabilities.
 
 ---
 
-## 🛠️ Technical Skills & Concepts (TinyML + DSP)
+## Technical Skills & Concepts (TinyML + DSP)
 
 ### ADC & DMA
 The microphone's analog voltage is digitized by the ADC at ~4 kHz. DMA transfers these samples to RAM in the background, allowing simultaneous audio capture and ML inference without CPU blocking.
@@ -205,7 +206,7 @@ The RP2350's PIO state machines generate the precise nanosecond-level timing req
 
 ---
 
-## 📋 Requirements & Constraints
+## Requirements & Constraints
 
 * **FR-01/02**: Say "activate" to turn on the LED strip (State 0). Say it again to cycle through 14 modes.
 * **FR-03**: Say "cancel" to turn off the strip.
@@ -215,7 +216,7 @@ The RP2350's PIO state machines generate the precise nanosecond-level timing req
 
 ---
 
-## ⚠️ Common Gotchas & Troubleshooting
+## Common Gotchas & Troubleshooting
 
 | Problem | Cause | Fix |
 |---------|-------|-----|
@@ -227,7 +228,7 @@ The RP2350's PIO state machines generate the precise nanosecond-level timing req
 
 ---
 
-## 👏 Credits & Acknowledgements
+## Credits & Acknowledgements
 
 This project was built upon the incredible open-source work of several individuals and organizations:
 
