@@ -1,0 +1,12 @@
+# Build directories
+build/
+bin/
+obj/
+
+# Project specific ignores
+Screenshots for Report/
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
