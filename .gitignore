@@ -7,6 +7,12 @@ obj/
 Screenshots for Report/
 *.zip
 
+# Ignore all markdown files
+*.md
+
+# EXCEPT README files in any directory
+!README.md
+
 # OS files
 .DS_Store
 Thumbs.db
