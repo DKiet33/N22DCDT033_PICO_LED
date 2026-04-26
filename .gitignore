@@ -7,10 +7,9 @@ obj/
 Screenshots for Report/
 *.zip
 
-# Ignore all markdown files
+# Markdown files
+# Ignore all markdown files, except READMEs
 *.md
-
-# EXCEPT README files in any directory
 !README.md
 
 # OS files
