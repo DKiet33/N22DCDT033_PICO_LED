@@ -6,6 +6,8 @@ obj/
 # Project specific ignores
 Screenshots for Report/
 *.zip
+pico-sdk/
+examples/
 
 # Markdown files
 # Ignore all markdown files, except READMEs
