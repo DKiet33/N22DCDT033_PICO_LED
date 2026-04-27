@@ -37,7 +37,7 @@ This system runs **fully offline** on the microcontroller—no Wi-Fi, no cloud p
 │  3V3(OUT)    ────► V+   [MAX9814]                │
 │  GND         ────► GND  [MAX9814]                │
 │                                                  │
-│  GP0         ────► DIN  [WS2812 LED Strip]       │
+│  GP7         ────► DIN  [WS2812 LED Strip]       │
 │  GND         ────► GND  [WS2812 LED Strip]       │
 │                                                  │
 │  GP25        ──── Onboard LED (debug blinker)    │
