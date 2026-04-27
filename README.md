@@ -34,17 +34,18 @@ This system runs **fully offline** on the microcontroller—no Wi-Fi, no cloud p
 │                 Raspberry Pi Pico 2              │
 │                                                  │
 │  GP26 (ADC0) ◄──── OUT  [MAX9814 Microphone]     │
-│  3V3(OUT)    ────► VCC  [MAX9814]                │
+│  3V3(OUT)    ────► V+   [MAX9814]                │
 │  GND         ────► GND  [MAX9814]                │
 │                                                  │
-│  GP7         ────► DIN  [WS2812 LED Strip]       │
+│  GP0         ────► DIN  [WS2812 LED Strip]       │
 │  GND         ────► GND  [WS2812 LED Strip]       │
 │                                                  │
 │  GP25        ──── Onboard LED (debug blinker)    │
 └──────────────────────────────────────────────────┘
 
-[5V Power Supply] ────► VCC  [WS2812 LED Strip]
-[5V Power Supply] ────► GND  [WS2812 LED Strip] (shared with Pico GND)
+[Pico Micro USB]  ────► 3.3V power to Pico 2
+[5V USB-C Board]  ────► V    [WS2812 LED Strip]
+[5V USB-C Board]  ────► GND  [WS2812 LED Strip] (shared with Pico GND)
 ```
 
 > **WARNING:** **Do NOT power the LED strip from the Pico's VBUS/3V3.** A 60-LED strip at full brightness draws ≈3.6A. Use a separate 5V supply and **share a common ground** with the Pico.
