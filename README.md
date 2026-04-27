@@ -183,7 +183,7 @@ In `lights.cpp`:
 ### Phase 5 — Build & Flash
 1. Open a terminal (like **Developer PowerShell for VS**).
 2. Navigate to the `pico-light-voice` build directory.
-3. Run `cmake .. -G "NMake Makefiles"` (or Ninja).
+3. Run `cmake .. -G "NMake Makefiles" -DPICO_BOARD=pico2"` (or Ninja).
 4. Run `nmake` (or `ninja`).
 5. Hold **BOOTSEL** on the Pico 2, connect USB, and drag `build/pico-voice.uf2` onto the `RPI-RP2` drive.
 6. Monitor serial output (115200 baud) for classification probabilities.
